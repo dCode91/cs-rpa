@@ -5,7 +5,7 @@ flow:
     - http_client_get:
         do:
           io.cloudslang.base.http.http_client_get:
-            - url: 'https://slack.com/api/users.list?token=xoxp-215895409012-216679501393-329965580883-305a001734fca1e3643dcc5fdc7acf63&pretty=1'
+            - url: 'https://slack.com/api/users.list?token=slack_token&pretty=1'
             - proxy_host: web-proxy.eu.hpecorp.net
         navigate:
           - SUCCESS: SUCCESS
