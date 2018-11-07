@@ -89,6 +89,7 @@
 #! @output return_code: '0' if success, '-1' otherwise.
 #! @output script_exit_code: '0' if success, '-1' otherwise.
 #! @output script_name: name of the script.
+#! @output test_return_result: Test output parameters.
 #!
 #! @result FAILURE: The operation could not be executed.
 #! @result SUCCESS: The operation executed successfully.
@@ -217,7 +218,7 @@ flow:
         publish:
           - exception
           - return_code
-          - return_result
+          - test_return_result: '${return_result}'
           - stderr
           - script_exit_code
         navigate:
@@ -356,7 +357,7 @@ flow:
         publish:
           - exception
           - stderr
-          - return_result
+          - test_return_result: '${return_result}'
           - return_code
           - script_exit_code
         navigate:
@@ -378,6 +379,7 @@ flow:
     - return_code
     - script_exit_code
     - script_name
+    - test_return_result: '${test_return_result}'
   results:
     - FAILURE
     - SUCCESS
