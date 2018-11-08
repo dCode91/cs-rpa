@@ -5,10 +5,10 @@ flow:
     - run_test:
         do:
           io.cloudslang.microfocus.uft.run_test:
-            - host: ec2-34-227-178-5.compute-1.amazonaws.com
+            - host: 
             - username: administrator
             - password:
-                value: 'PdNg?GS6&k'
+                value: ''
                 sensitive: true
             - port: '5985'
             - protocol: http
